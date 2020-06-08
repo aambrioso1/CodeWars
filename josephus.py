@@ -1,7 +1,7 @@
 """
 Solving: https://www.codewars.com/kata/josephus-permutation/
 
-def josephus(n,k)
+def josephus(items,k)
 
 Examples with 
 [1,2,3,4,5,6,7] - initial sequence
@@ -19,21 +19,32 @@ Note the the Josephus survivor should sit in position 4.
 """
 
 def josephus(items,k):
-	if items == []: # return an empty list if items is empty
+	
+	if items == []: # Return an empty list if items is empty.
 		return []
-	next = (k - 1) % len(items) # the position of the next item to be removed
-	j_perm = [] # initialize the Josephus permuation at empty
+	
+	next = (k - 1) % len(items) # The position of the next item to be removed.
+	j_perm = [] # Initialize the Josephus permuation at empty.
+	
 	for i in range(len(items) - 1):
-		j_perm.append(items.pop(next))  # pops the element at the next position off the items list
-		next = (next + k - 1) % len(items) # Many other people used this same idea!
+		j_perm.append(items.pop(next))  # Pops the element at the next position off the items list.
+		
+		# The next line is the key.  Many other people used this same idea!  
+		# The next item to be remove will be the kth one from the item just removed.
+		# First we add k to next.   Since the list is one item shorter after the pop, we need to subtract 1.
+		# Since that addition may result in a number greater that the length of the list, we do the calculation
+		# mod the length of the list to bring the value of next back the current position.
+		next = (next + k - 1) % len(items)
+	
 	return j_perm			
 
 
-l = list('CodeWars')
+l = list('CodeWars') # a list of the letters in CodeWars.
+# Many other people used this same idea!
 print(josephus([1,2,3,4,5,6,7,8,9,10],1))
 print(josephus([1,2,3,4,5,6,7],3))
 print(josephus([1,2,3,4,5,6,7,8,9,10],2))
-print(josephus([1,2,3,4,5,6,7,8,9,10],40))
-print(josephus(l,4))
-print(josephus([],3))
-print(josephus([i for i in range(1,42)], 2))
+print(josephus([1,2,3,4,5,6,7,8,9,10],40)) # test for k greater than the size of the group.
+print(josephus(l,4)) # tests a list of strings.
+print(josephus([],3)) # tests an empty list.
+print(josephus([i for i in range(1,42)], 2)) # This is the original problem with 41 soldiers.
