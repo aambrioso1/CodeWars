@@ -38,9 +38,8 @@ def josephus(items,k):
 	
 	return j_perm			
 
-
 l = list('CodeWars') # a list of the letters in CodeWars.
-# Many other people used this same idea!
+
 print(josephus([1,2,3,4,5,6,7,8,9,10],1))
 print(josephus([1,2,3,4,5,6,7],3))
 print(josephus([1,2,3,4,5,6,7,8,9,10],2))
