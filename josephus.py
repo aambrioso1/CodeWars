@@ -27,7 +27,7 @@ def josephus(items,k):
 	next = (k - 1) % len(items)  # The position of the next item to be removed.
 	j_perm = [] # Initialize the Josephus permuation at empty.
 	
-	for i in range(len(items)-1):
+	for i in range(len(items)):
 		j_perm.append(items.pop(next))  # Pops the element at the next position off the items list.
 		# Once I solved it, I was able to see other solutions.   There were a few super clever one-liners. 
 		# But many people used the same idea that I did.  The next line is the key idea. 
@@ -35,10 +35,10 @@ def josephus(items,k):
 		# First we add k to next.   Since the list is one item shorter after the pop, we need to subtract 1.
 		# Since that addition may result in a number greater that the length of the list, we do the calculation
 		# mod the length of the list.   This brings the next point back around to the beginning of the list.
+		if len(items) == 0:
+			return j_perm
 		next = (next + k - 1) % len(items)
 	
-	return j_perm			
-
 l = list('CodeWars') # a list of the letters in CodeWars.
 
 print(josephus([1,2,3,4,5,6,7,8,9,10],1))
