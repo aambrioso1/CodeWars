@@ -24,7 +24,7 @@ def josephus(items,k):
 	if items == []: # Return an empty list if items is empty.
 		return []
 	
-	next = (k - 1) % len(items) # The position of the next item to be removed.
+	next = (k - 1) #  % len(items)  The position of the next item to be removed.
 	j_perm = [] # Initialize the Josephus permuation at empty.
 	
 	for i in range(len(items) - 1):
