@@ -1,5 +1,5 @@
 """
-This is my solutions to the following CodeWars problem:
+This is my solution to the following CodeWars problem:
 	https://www.codewars.com/kata/josephus-permutation/
 
 def josephus(items,k)
@@ -48,3 +48,4 @@ print(josephus([1,2,3,4,5,6,7,8,9,10],40)) # test for k greater than the size of
 print(josephus(l,4)) # tests a list of strings.
 print(josephus([],3)) # tests an empty list.
 print(josephus([i for i in range(1,42)], 2)) # This is the original problem with 41 soldiers.  The survivor is 19.
+print(f'The survivor for the original problem is {josephus([i for i in range(1,42)], 2)[40]}')
