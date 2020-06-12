@@ -24,10 +24,10 @@ def josephus(items,k):
 	if items == []: # Return an empty list if items is empty.
 		return []
 	
-	next = (k - 1) #  % len(items)  The position of the next item to be removed.
+	next = (k - 1) % len(items)  # The position of the next item to be removed.
 	j_perm = [] # Initialize the Josephus permuation at empty.
 	
-	for i in range(len(items) - 1):
+	for i in range(len(items)-1):
 		j_perm.append(items.pop(next))  # Pops the element at the next position off the items list.
 		# Once I solved it, I was able to see other solutions.   There were a few super clever one-liners. 
 		# But many people used the same idea that I did.  The next line is the key idea. 
