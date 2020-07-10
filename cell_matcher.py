@@ -1,7 +1,7 @@
 """
-Given two squares on a chess board using standard chess notation, a1 (lower left) to h8 (upper right), the funcion
+Given two squares on a chess board using standard chess notation, a1 (lower left) to h8 (upper right), the function
 cell_matcher(cell1, cell2) returns true if the squares are the same color and false if they are not.
-This solve the CodeWars problem:  https://www.codewars.com/kata/5894134c8afa3618c9000146
+This solves the CodeWars problem:  https://www.codewars.com/kata/5894134c8afa3618c9000146
 Note the code will need some minor tweaking to solve the problem.   I leave that to reader.
 """
 
@@ -21,16 +21,16 @@ def cell_matcher(cell1, cell2):
 		return True
 	return False
 
-#  This function allows us to put some nice language into our output automatically.
+#  This function allows us to automatically put some nice language into our output.
 def answer(b):
 	if b:
 		return 'are'
 	return "are not"
 
-c1, c2 = 'a1', 'a2'  # This pair of squares are not the same color.
+c1, c2 = 'a1', 'a2'  # This pair of squares is not the same color.
 ans = answer(cell_matcher(c1,c2))
 print(f'The cells {c1} and {c2} {ans} the same color.')  # Note how simple it is too use f strings to produce nicely formatted output.
 
-c1, c2 = 'a1', 'b2' # This pair of squares are the same color.
+c1, c2 = 'a1', 'b2' # This pair of squares is the same color.
 ans = answer(cell_matcher(c1,c2))
 print(f'The cells {c1} and {c2} {ans} the same color.')
