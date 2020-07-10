@@ -2,7 +2,7 @@
 Given two squares on a chess board using standard chess notation, a1 (lower left) to h8 (upper right), the function
 cell_matcher(cell1, cell2) returns true if the squares are the same color and false if they are not.
 This solves the CodeWars problem:  https://www.codewars.com/kata/5894134c8afa3618c9000146
-Note the code will need some minor tweaking to solve the problem.   I leave that to reader.
+Note the code will need some minor tweaking to solve the problem.   I leave that to the reader.
 """
 
 # We use zip to create a dictionary.
