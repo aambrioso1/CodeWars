@@ -13,10 +13,10 @@ def cell_matcher(cell1, cell2):
 	# Note the use of unpacking and multiple assignment here.
 	x1, y1 = cell1
 	x2, y2 = cell2
-	sum1 = d[x1] + int(y1) # sum of the first cells coordinates.
-	sum2 = d[x2] + int(y2) # sum of the second cells coordinates.
+	sum1 = d[x1] + int(y1) # sum of the first cell's coordinates.
+	sum2 = d[x2] + int(y2) # sum of the second cell's coordinates.
 	
-	# We decide if cell match color in a simple mathematical way.
+	# We decide if two cells match color in a simple mathematical way.
 	if sum1 % 2 == sum % 2:
 		return True
 	return False
