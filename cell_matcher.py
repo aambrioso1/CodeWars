@@ -25,7 +25,7 @@ def cell_matcher(cell1, cell2):
 def answer(b):
 	if b:
 		return 'are'
-	return "are not"
+	return 'are not'
 
 c1, c2 = 'a1', 'a2'  # This pair of squares is not the same color.
 ans = answer(cell_matcher(c1,c2))
