@@ -21,12 +21,14 @@ def bernoulli_number(n):
     if n % 2 == 1 and n >= 3:
         return 0
     # Define some convenient fractions
-    zero = Fraction(0,1)
-    one = Fraction(1,1)
-    neg_one = Fraction(-1,1)
+    zero = Fraction(0,1) # 0/1
+    one = Fraction(1,1) # 1/1
+    neg_one = Fraction(-1,1) # -1/1
     
-    b_list = [one]
+    b_list = [one] # start the list of Bernoulli numbers is the 0th term = 1
+    
     c_list = [[comb(i,j) for j in range(i)] for i in range(2,n+2)]
+    print(f'c_list = {c_list}')
 
     for seq in c_list:
         if len(b_list) % 2 == 1 and len(b_list) >= 4:
@@ -40,3 +42,6 @@ def bernoulli_number(n):
             b_list.append(new_b)
     # print(b_list)
     return b_list[n]
+
+for i in range(11):
+    print(f'bernoulli_number({i}) is {bernoulli_number(i)}')
