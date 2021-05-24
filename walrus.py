@@ -27,7 +27,11 @@ def f(t,i):return v if (v:=len(t))>i else 0
 def f(t,i):return (0,len(t))[len(t)>i]
 def f(t,i):return len(t) or i
 
-This also works f=lambda i,n:(n<len(i))*len(i) which is a nicer answer (optional walrus ;))
+This also works: 
+
+f=lambda i,n:(n<len(i))*len(i) 
+
+This is a nicer answer since it uses basic function and logic (optional walrus ;))
 
 """
 f=lambda t,i:(0,v:=len(t))[v>i] # This is my solution
