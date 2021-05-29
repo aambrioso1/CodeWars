@@ -23,5 +23,18 @@ test.assert_equals(exp_sum(10), 42)
 """
 
 def exp_sum(n):
-    #your code here
+    if n == 0: return 1
+    
+    S = 0; J = n-1; k = 2
+    
+    while 0 <= J:
+        T = exp_sum(J)
+        S = S+T if is_odd(k//2) else S-T
+        J -= k if is_odd(k) else k//2
+        k += 1
 
+    return S
+
+print(f'{exp_sum(4)=} should be 5')
+print(f'{exp_sum(5)=} should be 7')
+print(f'{exp_sum(10)=} should be 42')

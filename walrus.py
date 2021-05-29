@@ -39,3 +39,6 @@ f=lambda t,i:(0,v:=len(t))[v>i] # This is my solution
 lst = ['a', 'b', 'c']
 print(f'{f(lst, 4)=} should be 0')
 print(f'{f(lst, 3)=} should be {len(lst)}')
+
+
+f=lambda i,n:(n<len(i))*len(i)
